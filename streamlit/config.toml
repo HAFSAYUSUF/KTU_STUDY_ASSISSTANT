@@ -1,8 +1,14 @@
+[server]
+port = 8501
+enableCORS = false
+headless = true
+
 [theme]
 base = "light"
-primaryColor = "#6A1B9A"
-backgroundColor = "#FFF8F0"
-secondaryBackgroundColor = "#FFEBF0"
-textColor = "#1A1A1A"
+primaryColor = "#6A1B9A"             # Purple
+backgroundColor = "#FFF8F0"          # Soft cream
+secondaryBackgroundColor = "#FFEBF0" # Light pink
+textColor = "#1A1A1A"                # Dark gray
 font = "monospace"
+
 
