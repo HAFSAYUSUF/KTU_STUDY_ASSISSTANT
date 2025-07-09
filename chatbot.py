@@ -876,7 +876,8 @@ st.markdown("""
         h1 {
             font-size: 2.8em;
             font-weight: 800;
-            background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+            background: linear-gradient(to right, #ff416c 0%, #ff4b2b 100%);
+
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
