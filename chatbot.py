@@ -851,57 +851,87 @@ scheme = {
     "2024": syllabus_2024
 }
 
+import streamlit as st
 
-# Sidebar
-# Streamlit UI
 st.set_page_config(page_title="KTU Study Assistant", layout="centered")
+
+# 💅 Apply colorful custom styles
 st.markdown("""
     <style>
-        /* Main background for whole app */
+        /* 🎨 Main app background (gradient) */
         html, body, [data-testid="stAppViewContainer"] {
-            background-color: #f0f4ff;
+            background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+            color: #000000;
+            font-family: 'Comic Sans MS', monospace;
         }
 
-        /* Sidebar background */
+        /* 📚 Sidebar (cool blue with shadow) */
         [data-testid="stSidebar"] {
-            background-color: #dff9fb;
+            background: linear-gradient(180deg, #74ebd5 0%, #ACB6E5 100%);
+            color: #000000;
+            box-shadow: 2px 0 8px rgba(0,0,0,0.2);
         }
 
-        /* Title color */
+        /* 📘 Title with gradient text */
         h1 {
-            color: #0a3d62;
-            font-size: 2.5em;
-            font-weight: 700;
+            font-size: 2.8em;
+            font-weight: 800;
+            background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
-        /* Chat input box styling */
-        [data-testid="stChatInput"] textarea {
+        /* 🌈 Selectboxes and inputs */
+        input, textarea, select {
             background-color: #ffffff !important;
-            border-radius: 8px !important;
-            border: 1px solid #ced6e0;
+            color: #000000 !important;
+            border-radius: 12px !important;
+            border: 2px solid #ff6f91 !important;
+            padding: 6px 10px !important;
         }
 
-        /* Info box styling */
+        /* 🔴 Buttons */
+        button[kind="primary"] {
+            background-color: #ff4b5c !important;
+            color: white !important;
+            font-weight: bold;
+            border-radius: 10px !important;
+            border: none;
+            padding: 8px 16px !important;
+            transition: all 0.3s ease-in-out;
+        }
+
+        button[kind="primary"]:hover {
+            background-color: #ff6f91 !important;
+            transform: scale(1.05);
+        }
+
+        /* 🟦 Chat input box */
+        [data-testid="stChatInput"] textarea {
+            background-color: #fff8dc !important;
+            border-radius: 10px !important;
+            border: 2px dashed #ff9ff3 !important;
+        }
+
+        /* 💡 Alert/info box */
         .stAlert {
             background-color: #dfe6e9 !important;
-            border-left: 6px solid #0984e3 !important;
+            border-left: 6px solid #00cec9 !important;
         }
 
-        /* Markdown font styling */
+        /* 📝 Markdown text */
         .stMarkdown p {
-            font-size: 1.05rem;
+            font-size: 1.1rem;
             color: #2d3436;
         }
-
-        /* Selectbox styling */
-        [data-baseweb="select"] {
-            background-color: #ffffff !important;
-            border-radius: 8px !important;
-        }
-
-        
     </style>
 """, unsafe_allow_html=True)
+
+
+
+
+
+
 
 st.title("📘 KTU ECE Study Assistant")
 st.markdown("Select a scheme, subject and module, and ask anything from that portion!")
